@@ -1,14 +1,11 @@
-/**
- * To Do list
- */
-
 import React from 'react';
+import './App.css';
 
 const ChatMessage = () => {
     return (
-        <div class="chatEverything">
-            <div class="chatUsername">@SampleUsername</div>
-            <div class="chatBody">Here is some sample body text</div>
+        <div className="chatEverything">
+            <div className="chatUsername">@SampleUsername</div>
+            <div className="chatBody">Here is some sample body text</div>
         </div>
     );
 };

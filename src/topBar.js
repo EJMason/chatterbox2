@@ -31,8 +31,6 @@ class TopBar extends Component {
                 <div>
                     <Select multi simpleValue
                      name="Channels"
-                     multi={true}
-                     simpleValue={true}
                      disabled={this.state.disabled}
                      options={this.props.dropDownOptions}
                      value={this.state.value}

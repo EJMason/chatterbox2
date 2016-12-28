@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import logo from './logo.svg';
 import './App.css';
 
 import TopBar from './topBar';
+import ChatBox from './chatBox';
 
 class App extends Component {
   constructor(props){
@@ -22,6 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <TopBar dropDownOptions={this.state.chatRooms} />
+        <ChatBox />
       </div>
     );
   }

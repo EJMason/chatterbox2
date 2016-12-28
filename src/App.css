@@ -18,6 +18,26 @@
   font-size: large;
 }
 
+.chatAreaOutside {
+  border:1px solid black;
+  border-radius: 5px 5px 5px 5px;
+  overflow: scroll;
+
+}
+
+.chatEverything {
+  border:1px solid black;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.chatUsername, .chatBody {
+  text-align: left;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
