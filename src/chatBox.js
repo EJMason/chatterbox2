@@ -1,13 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class ChatBox extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
-    }
-}
+const ChatBox = () => {
+    return (
+        <div>
+            
+        </div>
+    );
+};
 
 export default ChatBox;
