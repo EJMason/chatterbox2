@@ -6,13 +6,13 @@ import TopBar from './topBar';
 import ChatBox from './chatBox';
 import MessageBox from './messageBox';
 
-import getMessages from './data/getData.js';
+import getMessages from './getData';
 
 class App extends Component {
   constructor(props){
     super(props);
 
-    console.log(getMessages);
+    console.log(getMessages(this.processData));
 
     this.state = {
       chatRooms: [
@@ -22,6 +22,9 @@ class App extends Component {
     }
   }
 
+  processData (data) {
+    console.log(data);
+  }
 
   render() {
     return (
@@ -36,4 +39,8 @@ class App extends Component {
 
 export default App;
 
-//
+/**
+ * Why cant I put stuff in other folders?
+ * What is the best practice for encapulating methods like getData.js
+ *   
+ */

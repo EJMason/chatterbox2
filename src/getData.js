@@ -1,11 +1,12 @@
 import axios from 'axios';
+import './config.js';
 
 var getMessages = (callback) => {
     axios.get('https://api.parse.com/1/classes/messages', {
-        data: 'order=-createdAt'
+        params: { order: '-createdAt' }
     })
-    .then((response) => {
-      callback(response);
+    .then((data) => {
+      callback(data);
     })
     .catch((error) => {
         console.log(error);
