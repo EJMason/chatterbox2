@@ -15,4 +15,4 @@ build
 npm-debug.log
 
 # API Keys
-data/config.js
+config.js

@@ -6,9 +6,13 @@ import TopBar from './topBar';
 import ChatBox from './chatBox';
 import MessageBox from './messageBox';
 
+import getMessages from './data/getData.js';
+
 class App extends Component {
   constructor(props){
     super(props);
+
+    console.log(getMessages);
 
     this.state = {
       chatRooms: [
@@ -32,3 +36,4 @@ class App extends Component {
 
 export default App;
 
+//

@@ -20,6 +20,10 @@
   font-size: large;
 }
 
+/*
+  CSS for chatBox.js
+*/
+
 .chatAreaOutside {
   height: 400px;
   border: 1px solid black;
@@ -27,6 +31,10 @@
   overflow: scroll;
 
 }
+
+/*
+  CSS for chatMessage.js
+*/
 
 .chatEverything {
   border:1px solid black;
@@ -47,7 +55,6 @@ CSS for messageBox.js
 .myForm {
   margin-top: 5px;
 }
-
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
