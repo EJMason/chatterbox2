@@ -8,7 +8,6 @@ import './App.css';
 import TopBar from './topBar';
 import ChatBox from './chatBox';
 import MessageBox from './messageBox';
-//import getMessages from './getData';
 
 class App extends Component {
   constructor(props){
@@ -21,13 +20,11 @@ class App extends Component {
     }
   }
 
-  getAllData(){
-    return axios('/1/classes/messages');
-  }
+/**
+ * _____Methods for retrieving data from Server_____
+ */
 
   getChatRooms(chatObject) {
-    
-    console.log(chatObject);
     var findRooms = {};
     for (let value of chatObject.data.results) {
       if(value.roomname){
@@ -46,9 +43,15 @@ class App extends Component {
     this.setState({
       chatRooms: allRooms
     });
-    console.log(this.state.chatRooms);
   }
 
+  getAllData(){
+    return axios('/1/classes/messages');
+  }
+
+/**
+ *  _____Required methods______
+ */
   componentDidMount () {
   this.getAllData()
     .then((data) => {

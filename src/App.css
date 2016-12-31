@@ -56,6 +56,24 @@ CSS for messageBox.js
   margin-top: 5px;
 }
 
+/*
+CSS for topBar.js
+*/
+.Select-value-label {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Select-option {
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

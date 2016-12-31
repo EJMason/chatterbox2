@@ -30,12 +30,13 @@ class TopBar extends Component {
                 <h1> ChatterBox 2</h1>
                 <div>
                     <Select multi simpleValue
-                     name="Channels"
-                     disabled={this.state.disabled}
-                     options={this.props.dropDownOptions}
-                     value={this.state.value}
-                     onChange={this.handleSelectChange.bind(this)}
-                     autosize={true} />
+                        classNmae="dropdownMenu"
+                        name="Channels"
+                        disabled={this.state.disabled}
+                        options={this.props.dropDownOptions}
+                        value={this.state.value}
+                        onChange={this.handleSelectChange.bind(this)}
+                        autosize={true} />
                 </div>
             </div>
         );
