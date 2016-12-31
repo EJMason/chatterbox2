@@ -1,29 +1,60 @@
 import React, { Component } from 'react';
+import {escape} from 'underscore';
+import axios from 'axios';
 
+import './config.js';
 import './App.css';
 
 import TopBar from './topBar';
 import ChatBox from './chatBox';
 import MessageBox from './messageBox';
-
-import getMessages from './getData';
+//import getMessages from './getData';
 
 class App extends Component {
   constructor(props){
     super(props);
 
-    console.log(getMessages(this.processData));
-
     this.state = {
-      chatRooms: [
-        {value: 'room1', label: 'Room 1'},
-        {value: 'room2', label: 'Room 2'}
-      ]
+      currentChatRoom: '',
+      chatRooms: [],
+      lastMessage: ''
     }
   }
 
-  processData (data) {
-    console.log(data);
+  getAllData(){
+    return axios('/1/classes/messages');
+  }
+
+  getChatRooms(chatObject) {
+    
+    console.log(chatObject);
+    var findRooms = {};
+    for (let value of chatObject.data.results) {
+      if(value.roomname){
+        findRooms[escape(value.roomname)] = escape(value.roomname);
+      }
+    }
+
+    var allRooms = []
+    for (var key in findRooms){
+      allRooms.push({
+        value: key,
+        label: key
+      })
+    }
+    
+    this.setState({
+      chatRooms: allRooms
+    });
+    console.log(this.state.chatRooms);
+  }
+
+  componentDidMount () {
+  this.getAllData()
+    .then((data) => {
+      this.getChatRooms(data);
+    })
+    
   }
 
   render() {
