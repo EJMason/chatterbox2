@@ -28,7 +28,7 @@ class TopBar extends Component {
     render() {
         return (
             <div>
-                <h1> ChatterBox 2</h1>
+                <h1 className="font-effect-neon title"> ChatterBox</h1>
                 <div>
                     <Select multi simpleValue
                         className="dropdownMenu"

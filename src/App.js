@@ -37,8 +37,7 @@ updateRoomsHandler (currentRooms) {
     var messagesToRender = [];
     var i = 0;
     while(i < messages.length && messages[i].objectId !== this.state.lastMessage) {
-      console.log(this.state.currentChatRooms);
-      if(this._isChatRoom(messages[i].roomname) || this.state.currentChatRooms[0] === "") {
+      if(this._isChatRoom(messages[i].roomname) || this.state.currentChatRooms[0] === "" || this.state.currentChatRooms.length === 0) {
         if(messages[i].hasOwnProperty('text') && messages[i].text.length > 0) {
           messagesToRender.push({
             "createdAt": messages[i].createdAt,
