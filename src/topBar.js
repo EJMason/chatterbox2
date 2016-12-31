@@ -18,6 +18,7 @@ class TopBar extends Component {
 		this.setState({ 
             value: value 
             });
+        this.props.selectionHandler(value);
 	}
 
     toggleDisabled (e) {
@@ -30,8 +31,9 @@ class TopBar extends Component {
                 <h1> ChatterBox 2</h1>
                 <div>
                     <Select multi simpleValue
-                        classNmae="dropdownMenu"
+                        className="dropdownMenu"
                         name="Channels"
+                        placeholder="All"
                         disabled={this.state.disabled}
                         options={this.props.dropDownOptions}
                         value={this.state.value}

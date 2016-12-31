@@ -3,11 +3,17 @@ import './App.css';
 
 import ChatMessage from './chatMessage';
 
-const ChatBox = () => {
+const ChatBox = ({messages}) => {
     return (
         <div className="chatAreaOutside">
-            <ChatMessage />
-            <ChatMessage />
+            {messages.map((message) => (
+                <ChatMessage
+                    createdAt={message.createdAt}
+                    roomname={message.roomname}
+                    text={message.text}
+                    username={message.username}
+                    key={message.objectId} />
+            ))}
         </div>
     );
 };

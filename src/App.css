@@ -47,6 +47,8 @@
 
 .chatUsername, .chatBody {
   text-align: left;
+  word-wrap: break-word;
+  padding: 5px;
 }
 
 /*
